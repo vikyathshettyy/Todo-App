@@ -4,7 +4,7 @@ pipeline{
         
         stage('Checkout '){
             steps{
-                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/vikyathshettyy/Vikyath-Demo-Project']])
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/vikyathshettyy/Todo-App']])
                 sh 'echo checked out from git'
                 
             }
