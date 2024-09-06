@@ -10,7 +10,6 @@ app.use(express.json());
 // Connect to your MongoDB database (replace with your database URL)
 mongoose.connect("mongodb://mongodbcont:27017/todo-devops");
 
-// Check for database connection errors
 mongoose.connection.on("error", (error) => {
     console.error("MongoDB connection error:", error);
 });
@@ -33,7 +32,7 @@ app.post("/addTodoList", (req, res) => {
         .catch((err) => res.json(err));
 });
 
-// Update task fields (including deadline)
+// Update task fields 
 app.post("/updateTodoList/:id", (req, res) => {
     const id = req.params.id;
     const updateData = {
