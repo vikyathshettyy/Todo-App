@@ -1,19 +1,26 @@
-version: '3'
+version: '3.8'
 
 services:
-
-  app:
-    build: ./
+  todo_app:
+    image: vikyath11/todo-app-artifactory:v26
     ports:
-      - "3000:3000"
       - "3001:3001"
+      - "3000:3000"
+    deploy:
+      placement:
+        constraints:
+          - node.labels.role == appserver
 
-  mongodbcont:
+  mongodbi_db:
     image: mongo:latest
     ports:
       - "27017:27017"
     volumes:
       - mongodb-data:/data/db
+    deploy:
+      placement:
+        constraints:
+          - node.labels.role == worker
 
 volumes:
   mongodb-data:
