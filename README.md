@@ -1,8 +1,8 @@
 This project is a Todo Application built using the MERN stack (MongoDB, Express, React, Node.js) with a focus on DevOps practices. 
 It includes containerization with Docker, a CI/CD pipeline using Jenkins, and deployment on Docker Swarm managed through AWS EC2 instances.
 
-Project Overview
-Frontend: React
+Project Overview \n
+Frontend: React \n
 Backend: Express (Node.js)
 Database: MongoDB
 Containerization: Docker
